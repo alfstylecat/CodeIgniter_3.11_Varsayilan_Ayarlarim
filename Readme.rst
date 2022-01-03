@@ -13,7 +13,7 @@ Değişiklik Günlüğü
 
 - Gereksiz tüm dosyalar kaldırıldı.
 - System ve application klasörlerinin isimleri güvenlik nedeniyle değiştirildi.
-- System ve application klasörlerinin yeni isimleri ana dizindeki <code>index.php</code> içerisindeki eski isimlerle değiştirildi.
+- System ve application klasörlerinin yeni isimleri ana dizindeki index.php içerisindeki eski isimlerle değiştirildi.
 
 *******************
 İşe Yarar Bilgiler
