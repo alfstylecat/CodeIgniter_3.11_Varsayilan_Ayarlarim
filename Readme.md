@@ -1,13 +1,13 @@
-#Code Igniter Varsayılan Ayarlar Nedir?
+# Code Igniter Varsayılan Ayarlar Nedir?
 
 Bu komut dosyası her projede rutin ayarlarla uğraşmamak ve zamandan 
 tasarruf etmek amaci ile kendime göre tasarlanmıştır.Aşşağıdaki Değişiklikler 
 kısmını okuyarak eğer işinize yarıyor veya aynı kod dilini paylaşıyor isek 
 çatallamaktan çekinmeyin.
 
-*******************
-Değişiklik Günlüğü
-*******************
+---
+
+### Değişiklik Günlüğü
 
 1- Gereksiz tüm dosyalar kaldırıldı.
 
@@ -38,15 +38,16 @@ Değişiklik Günlüğü
   
   $config['sess_save_path'] = 'database'; 'database'; = oturum verilerini veritabanında saklayacağım için 'files' -> 'database' olarak değiştirildi.(Deneme için şimdilik 'files')
   $config['sess_match_ip'] = FALSE; = Kullandığım güvenlik sisteminde hilecileri veya cift hesapları yakalamak için false olması gerekiyor :).
-*******************
-İşe Yarar Bilgiler
-*******************
+  
+---
+
+### İşe Yarar Bilgiler
 
 - Session verilerini veritabanında tutmak çerez, güvenlik ve kullanılabilirlik sorununu topluca çözer.
 
-*******************
-Sunucu Gereksinimleri
-*******************
+---
+
+### Sunucu Gereksinimleri
 
 PHP version 5.6 veya daha yüksek versiyon önerilmektedir.
 
@@ -54,16 +55,51 @@ Php 5.4.8 sürümünde çalışır ancak ŞİDDETLE çalıştırmamanızı tavsi
 Php'nin bu tür eski sürümleri potansiyel güvenlik ve performansın yanı sıra 
 eksik özellikler barındırmaktadır.
 
-************
-Yükleme Önerileri
-************
+---
+
+### Yükleme Önerileri
 
 Hiçbirşey Sadece Tak ve Çalıştır :).
 
-***************
-Teşekkürler
-***************
+---
+
+### Teşekkürler
 
 Öncelikle Code Igniter ekibi Ellislab'a, 
 Code Igniter'a katkıda bulunanlara ve Code Igniter Kullanıcılarına 
 Teşekkür Ederiz Herşey Gönlünüzce Olsun. 
+
+---
+
+#### Readme Oluşturma El Altı Kodlar
+
+Direk HTML kodları ilede oluşturulabilir fakat readmi dosyasının uzantısı <code>.md</code> olmalı.
+
+#-##-###-####-#####-###### = h1-h6
+
+**kalın yazı**
+
+```
+Ornek kod bölümü
+```
+
+```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
+ 
+```php
+$degisken = "Merhaba";
+echo $degisken;
+```
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
