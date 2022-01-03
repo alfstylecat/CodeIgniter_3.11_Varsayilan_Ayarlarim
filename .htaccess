@@ -1,16 +1,4 @@
 <IfModule mod_rewrite.c>
-#En basit kullanım, Geçerli Dosya ve Klasor yollarını geçersiz işaretle ve tüm gelen istekleri index.php'ye yönlendir.
-#Yeniden yazmayı etkinleştir.
-RewriteEngine On
-#Tüm dosya yollarını yeniden yaz.
-RewriteCond %{REQUEST_FILENAME} !-f
-#Tüm klasör yollarını yeniden yaz.
-RewriteCond %{REQUEST_FILENAME} !-d
-#Yeniden yazılan tüm istekleri index.php'ye yönlendir.
-RewriteRule ^(.*)$ /index.php?$1 [L]
-</ifModule>
-
-<IfModule mod_rewrite.c>
 #Kötü botları veya kazıma yapan botları minik engelleme, liste arttırılabilir.
 RewriteEngine On
 RewriteCond %{HTTP_USER_AGENT} ^BlackWidow [OR]
@@ -91,6 +79,19 @@ RewriteCond %{HTTP_USER_AGENT} ^Xaldon\ WebSpider [OR]
 RewriteCond %{HTTP_USER_AGENT} ^Zeus
 RewriteRule .* - [F]
 </ifModule>
+
+<IfModule mod_rewrite.c>
+#En basit kullanım, Geçerli Dosya ve Klasor yollarını geçersiz işaretle ve tüm gelen istekleri index.php'ye yönlendir.
+#Yeniden yazmayı etkinleştir.
+RewriteEngine On
+#Tüm dosya yollarını yeniden yaz.
+RewriteCond %{REQUEST_FILENAME} !-f
+#Tüm klasör yollarını yeniden yaz.
+RewriteCond %{REQUEST_FILENAME} !-d
+#Yeniden yazılan tüm istekleri index.php'ye yönlendir.
+RewriteRule ^(.*)$ /index.php?$1 [L]
+</ifModule>
+
 
 
 
