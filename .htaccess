@@ -84,6 +84,8 @@ RewriteRule .* - [F]
 #En basit kullanım, Geçerli Dosya ve Klasor yollarını geçersiz işaretle ve tüm gelen istekleri index.php'ye yönlendir.
 #Yeniden yazmayı etkinleştir.
 RewriteEngine On
+#Aşşağıda yazılı dosyalara gelen tüm istekleri yeniden yaz.
+RewriteCond $1 !^(index\.php|assets|images|css|js|scripts|styles|vendor|(.*)\.swf|robots\.txt|favicon\.ico)
 #Tüm dosya yollarını yeniden yaz.
 RewriteCond %{REQUEST_FILENAME} !-f
 #Tüm klasör yollarını yeniden yaz.
@@ -105,14 +107,13 @@ RewriteRule ^(.*)$ /index.php?$1 [L]
 
 
 
-
-
 #2. Kullanım, Yazımı düzeltilmedi
 #RewriteEngine on
 #RewriteC#ond $1 !^(index\.php|images|css|js|robots\.txt)
 #RewriteCond $1 !^(index\.php|images|scripts|styles|vendor|robots\.txt)
 #RewriteCond %{REQUEST_FILENAME} !-f
 #RewriteCond %{REQUEST_FILENAME} !-d
+#QSA -> Get ile gönderilen verilerdeki parametreleride dahil et.(Sanırım buna gerek olmayabilir CI kendi kodu var.Yinede kontrol edilecek.
 #RewriteRule ^(.*)$ /index.php?$1 [L,QSA]
 
 
