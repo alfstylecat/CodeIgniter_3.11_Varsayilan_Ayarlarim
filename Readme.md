@@ -1,6 +1,4 @@
-###################
-Code Igniter Varsayılan Ayarlar Nedir?
-###################
+#Code Igniter Varsayılan Ayarlar Nedir?
 
 Bu komut dosyası her projede rutin ayarlarla uğraşmamak ve zamandan 
 tasarruf etmek amaci ile kendime göre tasarlanmıştır.Aşşağıdaki Değişiklikler 
@@ -28,7 +26,18 @@ Değişiklik Günlüğü
  -Gereklilikler? 1- Apache server mod_rewrite etkin olmalı
  
  -Sorunlar? 1- Wamp server'da rewrite_module varsayılan olarak devredışı olduğu için çalışmaz.Etkinleştirilmesi gerekir.
-
+ 
+ 
+ 6-Session ayarları yapıldı.
+ 
+  -$config['sess_driver'] = 'database'; = oturum verilerini veritabanında saklayacağım için 'files' -> 'database' olarak değiştirildi.(Deneme için şimdilik 'files')
+ 
+  -$config['sess_cookie_name'] = 'paidtomoney_session'; = oturum değişkeni ismi site isminizi yazabilirsiniz.
+  
+  $config['sess_expiration'] = 86400; = Oturum zaman aşımını 1 gün olarak ayarladık
+  
+  $config['sess_save_path'] = 'database'; 'database'; = oturum verilerini veritabanında saklayacağım için 'files' -> 'database' olarak değiştirildi.(Deneme için şimdilik 'files')
+  $config['sess_match_ip'] = FALSE; = Kullandığım güvenlik sisteminde hilecileri veya cift hesapları yakalamak için false olması gerekiyor :).
 *******************
 İşe Yarar Bilgiler
 *******************
