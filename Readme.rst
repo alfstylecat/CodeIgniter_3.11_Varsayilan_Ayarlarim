@@ -14,6 +14,8 @@ Değişiklik Günlüğü
 - Gereksiz tüm dosyalar kaldırıldı.
 - System ve application klasörlerinin isimleri güvenlik nedeniyle değiştirildi.
 - System ve application klasörlerinin yeni isimleri ana dizindeki index.php içerisindeki eski isimlerle değiştirildi.
+- application/config/config.php 26. satırda bulunan $config['base_url'] = '0.0.0.0'; anyfiddle'da çalışması için değiştirildi.
+Kullanım durumunda kendi localhostunuzu veya domain adresinizi yazın.
 
 *******************
 İşe Yarar Bilgiler
