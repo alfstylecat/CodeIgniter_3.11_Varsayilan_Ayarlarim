@@ -1,0 +1,112 @@
+#En basit kullanım, Geçerli Dosya ve Klasor yollarını geçersiz işaretle ve tüm gelen istekleri index.php'ye yönlendir.
+#Yeniden yazmayı etkinleştir.
+RewriteEngine On
+#Tüm dosya yollarını yeniden yaz.
+RewriteCond %{REQUEST_FILENAME} !-f
+#Tüm klasör yollarını yeniden yaz.
+RewriteCond %{REQUEST_FILENAME} !-d
+#Yeniden yazılan tüm istekleri index.php'ye yönlendir.
+RewriteRule ^(.*)$ /index.php?$1 [L]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#2. Kullanım, Yazımı düzeltilmedi
+#RewriteEngine on
+#RewriteC#ond $1 !^(index\.php|images|css|js|robots\.txt)
+#RewriteCond $1 !^(index\.php|images|scripts|styles|vendor|robots\.txt)
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ /index.php?$1 [L,QSA]
+
+
+#<IfModule mod_rewrite.c>
+#RewriteEngine On
+#RewriteCond $1 !^(index\.php|images|css|js|robots\.txt)
+#RewriteCond $1 !^(index\.php|images|scripts|styles|vendor|robots\.txt)
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ index.php/$1 [L]
+#</IfModule>
+
+#RewriteEngine On
+#RewriteBase /root_folder_name/ //kök klasor ismi
+#RewriteCond %{REQUEST_URI} ^system.*
+#RewriteCond $1 !^(index\.php|images|js|uploads|css|robots\.txt)
+#RewriteCond $1 !^(index\.php|images|scripts|styles|vendor|robots\.txt)
+#RewriteRule ^(.*)$ /index.php/$1 [L]
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ index.php/$1 [L]
+
+#RewriteCond $1 !^/(index\.php|assets/|humans\.txt)
+#RewriteCond $1 !^(index\.php|assets|images|js|css|uploads|favicon.png)
+
+#RewriteCond $1 !^(index\.php|[Javascript / CSS / Image root Folder name(s)]|robots\.txt)
+#RewriteCond $1 !^(index\.php|(.*)\.swf|forums|images|css|downloads|jquery|js|robots \.txt|favicon\.ico)
+#RewriteBase /
+
+#RewriteCond $1 !^(index\.php|public|images|robots\.txt|css)
+
+#<IfModule mod_rewrite.c>
+#RewriteEngine On
+#RewriteBase /
+
+#Removes access to the system folder by users.
+#Additionally this will allow you to create a System.php controller,
+#previously this would not have been possible.
+#'system' can be replaced if you have renamed your system folder.
+#RewriteCond %{REQUEST_URI} ^system.*
+#RewriteRule ^(.*)$ /index.php?/$1 [L]
+
+#When your application folder isn't in the system folder
+#This snippet prevents user access to the application folder
+#Submitted by: Fabdrol
+#Rename 'application' to your applications folder name.
+#RewriteCond %{REQUEST_URI} ^application.*
+#RewriteRule ^(.*)$ /index.php?/$1 [L]
+
+#Checks to see if the user is attempting to access a valid file,
+#such as an image or css document, if this isn't true it sends the
+#request to index.php
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ index.php?/$1 [L]
+#</IfModule>
+
+# Development
+#RewriteEngine On
+#RewriteBase /your_local_folder/
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond $1 !^(index\.php|images|scripts|styles|vendor|robots\.txt)
+#RewriteRule ^(.*)$ index.php/$1 [L]
+
+#Production PHP5 CGI mode
+#RewriteEngine On
+#RewriteBase /
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond $1 !^(index\.php|images|scripts|styles|vendor|robots\.txt)
+#RewriteRule ^(.*)$ index.php?/$1 [L]
+
+#Yeniden YazmaMotoru Açık
+#RewriteBase /{'<i>codeigniter'ı bir alt klasöre yüklediyseniz, codeigniter klasör adınız, Aksi takdirde onu bir ters eğik çizgi ile bırakın</i>'}/
+#RewriteCond %{REQUEST_URI} ^system.*
+#RewriteRule ^(.*)$ /index.php/$1 [L]
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ index.php/$1 [L]
