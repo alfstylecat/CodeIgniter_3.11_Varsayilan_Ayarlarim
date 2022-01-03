@@ -16,6 +16,12 @@ Değişiklik Günlüğü
 - System ve application klasörlerinin yeni isimleri ana dizindeki <code>index.php</code> içerisindeki eski isimlerle değiştirildi.
 
 *******************
+İşe Yarar Bilgiler
+*******************
+
+- Session verilerini veritabanında tutmak çerez, güvenlik ve kullanılabilirlik sorununu topluca çözer.
+
+*******************
 Sunucu Gereksinimleri
 *******************
 
