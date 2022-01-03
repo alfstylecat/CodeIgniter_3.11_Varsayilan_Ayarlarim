@@ -11,11 +11,16 @@ kısmını okuyarak eğer işinize yarıyor veya aynı kod dilini paylaşıyor i
 Değişiklik Günlüğü
 *******************
 
-- Gereksiz tüm dosyalar kaldırıldı.
-- System ve application klasörlerinin isimleri güvenlik nedeniyle değiştirildi.
-- System ve application klasörlerinin yeni isimleri ana dizindeki index.php içerisindeki eski isimlerle değiştirildi.
-- application/config/config.php 26. satırda bulunan $config['base_url'] = '0.0.0.0'; anyfiddle'da çalışması için değiştirildi.
-Kullanım durumunda kendi localhostunuzu veya domain adresinizi yazın.
+1- Gereksiz tüm dosyalar kaldırıldı.
+2- System ve application klasörlerinin isimleri güvenlik nedeniyle değiştirildi.
+3- System ve application klasörlerinin yeni isimleri ana dizindeki index.php içerisindeki eski isimlerle değiştirildi.
+4- application/config/config.php 26. satırda bulunan $config['base_url'] = '0.0.0.0'; anyfiddle'da çalışması için değiştirildi. Kullanım durumunda kendi localhostunuzu veya domain adresinizi yazın.
+
+5-Ne?    - index.php url yolundan kaldırıldı.
+ -Neden? - Güvenlik, Seo.
+ -Nasıl? application/config/config.php => S.38: $config['index_page'] = ''; S.55: $config['uri_protocol']	= 'REQUEST_URI';
+ -Gereklilikler? 1- Apache server mod_rewrite etkin olmalı
+ -Sorunlar? 1- Wamp server'da rewrite_module varsayılan olarak devredışı olduğu için çalışmaz.Etkinleştirilmesi gerekir.
 
 *******************
 İşe Yarar Bilgiler
