@@ -5,5 +5,5 @@
   "openDirectories": [
     "project"
   ],
-  "defaultCommand": "php -S 127.0.0.1:8080"
+  "defaultCommand": "php -S 0.0.0.0:8000"
 }
